@@ -236,24 +236,24 @@ public class UnHFS {
                         char[] lineSeparator =
                                 System.getProperty("line.separator").
                                         toCharArray();
-                        boolean trailingLineSeparator = true;
-                        for(int j = 0; j < lineSeparator.length; ++j) {
-                            int lineSeparatorIndex =
-                                    lineSeparator.length - 1 - j;
-                            int tmpIndex =
-                                    passwordLength - 1 - j;
+                        // boolean trailingLineSeparator = true;
+                        // for(int j = 0; j < lineSeparator.length; ++j) {
+                        //     int lineSeparatorIndex =
+                        //             lineSeparator.length - 1 - j;
+                        //     int tmpIndex =
+                        //             passwordLength - 1 - j;
 
-                            if(tmp[tmpIndex] !=
-                                    lineSeparator[lineSeparatorIndex])
-                            {
-                                trailingLineSeparator = false;
-                                break;
-                            }
-                        }
+                        //     if(tmp[tmpIndex] !=
+                        //             lineSeparator[lineSeparatorIndex])
+                        //     {
+                        //         trailingLineSeparator = false;
+                        //         break;
+                        //     }
+                        // }
 
-                        if(trailingLineSeparator) {
-                            passwordLength -= lineSeparator.length;
-                        }
+                        // if(trailingLineSeparator) {
+                        //     passwordLength -= lineSeparator.length;
+                        // }
 
                         password = new char[passwordLength];
                         System.arraycopy(tmp, 0, password, 0, passwordLength);
